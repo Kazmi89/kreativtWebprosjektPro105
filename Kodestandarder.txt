@@ -1,12 +1,12 @@
 __________________________________________________
 
 Navngivning i kode (klasser og id)
-- 
+- Bindestrek
 __________________________________________________
 
 Ryddighet og struktur
-- Inndentering = 
-- Fargesetting gjøres med ...
+- Inndentering = spaces: 2
+- Fargesetting gjøres med Hex
 __________________________________________________
 
 Semantikk
