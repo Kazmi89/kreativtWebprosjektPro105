@@ -119,6 +119,7 @@ h2:after {
   grid-template-rows: 20% 20% 20% 20% 20%;
 }
 
-.main-movie-content:hover p {
+.main-movie-box:hover .main-movie-content {
+  display: grid;
   grid-column-start: 1;
 }
