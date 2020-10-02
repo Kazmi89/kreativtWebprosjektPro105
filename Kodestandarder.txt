@@ -1,0 +1,29 @@
+__________________________________________________
+
+Navngivning i kode (klasser og id)
+- 
+__________________________________________________
+
+Ryddighet og struktur
+- Inndentering = 
+- Fargesetting gjøres med ...
+__________________________________________________
+
+Semantikk
+- Alle sidens seksjoner defineres ned <>.
+- <> i <> seksjon.
+- Generell korrekt bruk av elementer i henhold 
+  til gjeldende konvensjoner.
+__________________________________________________
+
+Kommentering
+- Kommentarer i både HTML og CSS.
+- Kommentarer på [språk].
+__________________________________________________
+
+Annet
+- Alle elementer planlegges/diskuteres på forhånd.
+- Avgjørelser om endringer i kode gjøres sammen.
+- All koding gjøres sammen, ved å fysisk sitte 
+  sammen eller over nett.
+__________________________________________________
