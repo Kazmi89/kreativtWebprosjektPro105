@@ -24,6 +24,4 @@ __________________________________________________
 Annet
 - Alle elementer planlegges/diskuteres på forhånd.
 - Avgjørelser om endringer i kode gjøres sammen.
-- All koding gjøres sammen, ved å fysisk sitte 
-  sammen eller over nett.
 __________________________________________________

@@ -110,16 +110,27 @@ h2:after {
 
 .main-movie-content {
   display: grid;
-}
+  opacity: 0;
 
-.main-movie-content:hover {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 20% 20% 20% 20% 20%;
+  transition-property: opacity;
+  transition-duration: 0s, 0s;
+  transition-timing-function: ease-in;
+  transition-delay: 0s, 0s;
 }
 
 .main-movie-box:hover .main-movie-content {
   display: grid;
+  opacity: 1;
+
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+
+  transition-property: opacity;
+  transition-duration: 0s, 0s;
+  transition-timing-function: ease-in;
+  transition-delay: 0.5s, 0.5s;
+}
+
+.main-movie-content p {
   grid-column-start: 1;
 }
