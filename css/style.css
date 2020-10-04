@@ -105,12 +105,13 @@ h2:after {
 .main-movie-box:hover {
   background-color: #404b56;
   width: 100%;
-  height: 200px;
+  height: 420px;
 }
 
-.main-movie-content {
+.main-movie-container {
   display: grid;
   opacity: 0;
+  text-align: left;
 
   transition-property: opacity;
   transition-duration: 0s, 0s;
@@ -118,19 +119,37 @@ h2:after {
   transition-delay: 0s, 0s;
 }
 
-.main-movie-box:hover .main-movie-content {
+.main-movie-box:hover .main-movie-container {
   display: grid;
   opacity: 1;
+  border: 3px solid red;
 
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 20% 20% 20% 20% 20%;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 100%;
 
   transition-property: opacity;
-  transition-duration: 0s, 0s;
+  transition-duration: 1s, 1s;
   transition-timing-function: ease-in;
   transition-delay: 0.5s, 0.5s;
 }
 
-.main-movie-content p {
-  grid-column-start: 1;
+.main-movie-item {
+  display: none;
+  font-size: 12px;
+}
+
+.main-movie-box:hover .main-movie-item {
+  display: grid;
+  border: 3px solid yellow;
+}
+
+.main-movie-box p {
+  grid-column: 1;
+}
+
+.main-movie-box img {
+  grid-column: 2;
+  width: 250px;
+  height: 350px;
+  padding: 0;
 }
