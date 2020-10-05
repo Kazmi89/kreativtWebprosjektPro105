@@ -68,10 +68,10 @@ h3 {
 
 h2:after {
   display: block;
+  width: 100px;
   height: 2px;
   background-color: floralwhite;
   content: " ";
-  width: 100px;
   margin: 0 auto;
   margin-bottom: 30px;
 }
@@ -87,69 +87,65 @@ h2:after {
 }
 
 /* Christian TEMP */
-.main-movie-box {
+.movie-box {
   width: 300px;
   height: 40px;
   background-color: #404b56;
   padding: 10px;
-  margin: 5px;
+  border-bottom: 2px solid #2c3034;
 
   text-align: center;
 
-  transition-property: width, height;
-  transition-duration: 0.5s, 0.5s;
-  transition-timing-function: ease-in;
-  transition-delay: 0s, 0s;
+  transition: width 0.5s ease-in 0s, height 0.5s ease-in 0s;
 }
 
-.main-movie-box:hover {
-  background-color: #404b56;
+.movie-box:hover {
   width: 100%;
   height: 420px;
 }
 
-.main-movie-container {
+.movie-container {
   display: grid;
   opacity: 0;
   text-align: left;
 
-  transition-property: opacity;
-  transition-duration: 0s, 0s;
-  transition-timing-function: ease-in;
-  transition-delay: 0s, 0s;
+  transition: opacity 0s ease-in 0s;
 }
 
-.main-movie-box:hover .main-movie-container {
+.movie-box:hover .movie-container {
   display: grid;
   opacity: 1;
-  border: 3px solid red;
 
-  grid-template-columns: 75% 25%;
-  grid-template-rows: 100%;
+  grid-template: auto / auto auto;
 
-  transition-property: opacity;
-  transition-duration: 1s, 1s;
-  transition-timing-function: ease-in;
-  transition-delay: 0.5s, 0.5s;
+  transition: opacity 1s ease-in 0.5s;
 }
 
-.main-movie-item {
+.movie-item {
   display: none;
-  font-size: 12px;
+  font-size: 20px;
+  margin: 3px;
 }
 
-.main-movie-box:hover .main-movie-item {
+.movie-box:hover .movie-item {
   display: grid;
-  border: 3px solid yellow;
 }
 
-.main-movie-box p {
+.movie-box p {
   grid-column: 1;
 }
 
-.main-movie-box img {
+.movie-box img {
   grid-column: 2;
   width: 250px;
   height: 350px;
-  padding: 0;
+}
+
+.upcoming-movie {
+  position: absolute;
+  width: 800px;
+  font-size: 100px;
+  transform: rotate(10deg);
+  top: 40px;
+  border: 2px solid red;
 }
