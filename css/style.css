@@ -89,9 +89,10 @@ h2:after {
 /* Christian TEMP */
 .movie-box {
   width: 300px;
-  height: 40px;
+  height: 60px;
+  font-weight: 100;
   background-color: #404b56;
-  padding: 10px;
+  padding: 20px;
   border-bottom: 2px solid #2c3034;
 
   text-align: center;
@@ -101,29 +102,28 @@ h2:after {
 
 .movie-box:hover {
   width: 100%;
-  height: 420px;
+  height: 430px;
 }
 
 .movie-container {
+  position: relative;
   display: grid;
   opacity: 0;
+  font-size: 16px;
   text-align: left;
+
+  grid-template: auto auto / auto auto;
 
   transition: opacity 0s ease-in 0s;
 }
 
 .movie-box:hover .movie-container {
-  display: grid;
   opacity: 1;
-
-  grid-template: auto / auto auto;
-
-  transition: opacity 1s ease-in 0.5s;
+  transition: opacity 0.5s ease-in 0.5s;
 }
 
 .movie-item {
   display: none;
-  font-size: 20px;
   margin: 3px;
 }
 
@@ -131,21 +131,36 @@ h2:after {
   display: grid;
 }
 
-.movie-box p {
-  grid-column: 1;
+p.movie-item {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
 }
 
-.movie-box img {
-  grid-column: 2;
+img.movie-item {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 2;
   width: 250px;
   height: 350px;
 }
 
 .upcoming-movie {
+  display: none;
   position: absolute;
-  width: 800px;
-  font-size: 100px;
-  transform: rotate(10deg);
-  top: 40px;
-  border: 2px solid red;
+  width: 100%;
+  font-size: 120px;
+  text-align: center;
+  top: 120px;
+  background-color: #cc0e1d4d;
+  transform: rotate(-10deg);
+}
+
+.movie-box:hover .upcoming-movie {
+  display: block;
+}
+
+.rating-container {
+  display: grid;
+  grid-template: auto auto / auto auto;
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
 }
