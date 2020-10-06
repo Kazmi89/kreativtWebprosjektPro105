@@ -109,10 +109,9 @@ h2:after {
   position: relative;
   display: grid;
   opacity: 0;
-  font-size: 16px;
-  text-align: left;
+  font-size: 89%;
 
-  grid-template: auto auto / auto auto;
+  grid-template: 40% 10% 10% 40% / auto auto auto auto;
 
   transition: opacity 0s ease-in 0s;
 }
@@ -132,23 +131,177 @@ h2:after {
 }
 
 p.movie-item {
-  grid-column: 1 / span 1;
+  text-align: left;
   grid-row: 1 / span 1;
+  grid-column: 1 / span 3;
 }
 
 img.movie-item {
-  grid-column: 2 / span 1;
-  grid-row: 1 / span 2;
+  grid-row: 1 / span 4;
+  grid-column: 4 / span 1;
   width: 250px;
   height: 350px;
 }
 
-.upcoming-movie {
+h3.ratings {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 3;
+}
+
+.imdb {
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+}
+
+.mc {
+  grid-row: 3 / span 1;
+  grid-column: 2 / span 1;
+}
+
+.rt {
+  grid-row: 3 / span 1;
+  grid-column: 3 / span 1;
+}
+
+#imdb1 {
+  grid-row: 4 / span 1;
+  grid-column: 1 / span 1;
+}
+
+#mc1 {
+  line-height: 70px;
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  font-size: 230%;
+  /*#fadf7f;*/
+
+  grid-row: 4 / span 1;
+  grid-column: 2 / span 1;
+}
+#mc1:before {
+  content: "57";
+  background-color: #ffff00;
+  animation-name: mc1Animation;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+@keyframes mc1Animation {
+  0% {
+    background-color: #ff0000;
+    content: "0";
+  }
+  1% {
+    content: "1";
+  }
+  3% {
+    content: "2";
+  }
+  5% {
+    content: "3";
+  }
+  7% {
+    content: "4";
+  }
+  8% {
+    content: "5";
+  }
+  9% {
+    content: "5";
+  }
+  10% {
+    content: "6";
+  }
+  12% {
+    content: "7";
+  }
+  14% {
+    content: "8";
+  }
+  15% {
+    content: "9";
+  }
+  17% {
+    content: "10";
+  }
+  19% {
+    content: "11";
+  }
+  21% {
+    content: "12";
+  }
+  22% {
+    content: "13";
+  }
+  24% {
+    content: "14";
+  }
+  26% {
+    content: "15";
+  }
+  28% {
+    content: "16";
+  }
+  29% {
+    content: "17";
+  }
+  31% {
+    content: "18";
+  }
+  33% {
+    content: "19";
+  }
+  35% {
+    content: "20";
+  }
+  36% {
+    content: "21";
+  }
+  38% {
+    content: "22";
+  }
+  40% {
+    content: "23";
+  }
+  42% {
+    content: "24";
+  }
+  43% {
+    content: "25";
+  }
+  45% {
+    content: "26.22";
+  }
+  47% {
+    content: "27";
+  }
+  100% {
+    background-color: #ffff00;
+    content: "57";
+  }
+}
+
+#rt1 {
+  padding: 5px;
+  grid-row: 4 / span 1;
+  grid-column: 3 / span 1;
+}
+
+.movie-item h3 {
+  position: relative;
+}
+
+img.upcoming-movie {
+  grid-row: 1 / span 3;
+  grid-column: 3 / span 1;
+}
+
+div.upcoming-movie {
   display: none;
   position: absolute;
   width: 100%;
   font-size: 120px;
-  text-align: center;
   top: 120px;
   background-color: #cc0e1d4d;
   transform: rotate(-10deg);
@@ -156,11 +309,4 @@ img.movie-item {
 
 .movie-box:hover .upcoming-movie {
   display: block;
-}
-
-.rating-container {
-  display: grid;
-  grid-template: auto auto / auto auto;
-  grid-column: 1 / span 1;
-  grid-row: 2 / span 1;
 }
