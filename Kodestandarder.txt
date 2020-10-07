@@ -1,24 +1,25 @@
 __________________________________________________
 
 Navngivning i kode (klasser og id)
-- Bindestrek
+- Klasser og id skrives i et ord med stor bokstav 
+  etter første ord e.g. enKlasse. 
 __________________________________________________
 
 Ryddighet og struktur
 - Inndentering = spaces: 2
-- Fargesetting gjøres med Hex
+- Fargesetting gjøres med Hex.
 __________________________________________________
 
 Semantikk
-- Alle sidens seksjoner defineres ned <>.
-- <> i <> seksjon.
+- Alle sidens seksjoner defineres med <section>.
+- <div> i <section> seksjon.
 - Generell korrekt bruk av elementer i henhold 
   til gjeldende konvensjoner.
 __________________________________________________
 
 Kommentering
-- Kommentarer i både HTML og CSS.
-- Kommentarer på [språk].
+- Kommentarer i både HTML og CSS. <!-- --> /* */
+- Kommentarer på norsk.
 __________________________________________________
 
 Annet
