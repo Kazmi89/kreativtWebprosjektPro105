@@ -1,9 +1,7 @@
 <!DOCTYPE html>   
 <html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/Grid.css">
-    <link rel="stylesheet" type="text/css" href="css/normalizer.css">
+    <link rel="stylesheet" type="text/css" href="css/style_main.css">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" type="text/css">
 
     <meta charset="UTF-8">
@@ -11,40 +9,53 @@
   </head>
   <body>
 
-    <section class="section-ironManFacts"> 
+    <!-- Knapp som tar deg tilbake til index -->
+    <a href="index.html"><button id="back">Tilbake</button></a>
+
+    <!-- Seksjon for generell fakta om Thor -->
+    <section> 
 
       <div class="row">
         <h2>Thor quick facts!</h2>
-        <p class="long-copy"> 
-          Iron Man was introduced by Marvel Comics in the comic book Tales of Suspense #39 in March 1963.<br>
-          The creators were Stan Lee, Larry Lieber, Don Heck, and Jack Kirby. 
+        <p class="longCopy"> 
+          Thor Odinson is a fictional character portrayed by Chris Hemsworth 
+          in the Marvel Cinematic Universe (MCU) film franchise, based on the Marvel Comics
+          character of the same name. In the films, Thor is one of the most powerful of the Asgardians, 
+          an alien civilization with long ties to Earth, who are therefore considered on Earth to be gods. 
         </p>   
       </div> 
 
       <div class="row">
-        <div class="test span-1-of-4 box">
-          <h3>What are Iron Man's powers?</h3>
+        <div class="infoBox">
+          <h3>What are Thor's powers?</h3>
           <p> 
-            Iron Man possesses a wealth of powers through his powered armor suit.
-            These powers include super strength, the ability to fly, durability, and a number of weapons. <br>
-            The primary weapons used by Iron Man are rays that are shot from the palms of his gauntlets
+            Thor is most powerful when he can channel his powers through an enchanted, 
+            loyal weapon forged on Nidavellir, like the hammer, Mjolnir, or the ax, Stormbreaker. 
+            But as the God of Thunder, he can also summon and harness pure lightning. Power scale
           </p>
         </div>
-        <div class="test span-2-of-4 box">
-          <h3>Who is Iron man and how did he get his power?</h3>
+        <div class="infoBox">
+          <h3>what weapons does thor use?</h3>
           <p>
-            Iron Man gets his superpowers from his metallic suit of armor and other technologies invented by his alter ego Tony Stark. <br>
-            Tony is a genius engineer and wealthy owner of a technology company. Tony built the Iron Man suit when he was kidnapped and suffered an injury to his heart. <br> 
-            The suit was meant to save his life and help him escape. Tony also has an improved artificial nervous system which gives him greater healing powers, super perception, and the ability to merge with his suit of armor. Outside of his armor he has been trained in hand-to-hand combat.
+            his weapons in the mcu is his hammer mjolnir and his axe Stormbreaker.
+            Mjolnir was a powerful enchanted war-hammer forged by the Dwarves for the Asgardian Royal Family. 
+            The hammer was destroyed by Hela during a confrontation between her.
+            Stormbreaker is an enchanted axe used by Thor. It was forged from Uru on Nidavellir, and can summon the Bifrost.
           </p>
         </div>
-        <div class="test span-3-of-4 box">
-          <h3>Who are Iron Man's Enemies?</h3>
+        <div class="infoBox">
+          <h3>Who are Thor's Enemies?</h3>
           <p> 
-            The list of foes that Iron Man has battled over the years is long. Here is a description of some of his main enemies:
-            <ul>
-              <li></li>
-              <li></li> 
+            The list of foes that Thor has battled over the years is long. Here are some of his main enemies:
+            <ul>   
+              <br>
+              <li>Thanos</li> 
+              <li>Loki</li>
+              <li>Hela</li>
+              <li>Surtur</li> 
+              <li>Destroyer</li> 
+              <li>Malekith</li> 
+              <li>Fenris Wolf</li>  
             </ul>
           </p>
         </div>
@@ -52,9 +63,13 @@
 
     </section>
     
+    <!-- Seksjon for hoved-filmene til Thor med sammendrag og rangeringer fra ulike nettsteder -->
     <section>
+
       <div class="row">
         <h2>Movies</h2>
+
+        <!-- Boks for film 1 -->
         <div class="movieBox">
           <h3>Thor</h3>
           <div class="movieContainer">
@@ -67,15 +82,41 @@
             </p>
             <img class="movieItem" src="images/movie1.jpg" alt="Thor">
             <h3 class="movieItem imdb">IMDb</h3>
-              <div class="movieItem imdb" id=imdb1>a</div>
+              <div class="movieItem" id="emptyStarsDiv1">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+              </div>
+              <div class="movieItem" id="fullStarsDiv1">
+                <img class="star" id="imdb1Star1" src="images/fullstar.png">
+                <img class="star" id="imdb1Star2" src="images/fullstar.png">
+                <img class="star" id="imdb1Star3" src="images/fullstar.png">
+                <img class="star" id="imdb1Star4" src="images/fullstar.png">
+                <img class="star" id="imdb1Star5" src="images/fullstar.png">
+                <img class="star" id="imdb1Star6" src="images/fullstar.png">
+                <img class="star" id="imdb1Star7" src="images/fullstar.png">
+              </div>
+              <div class="movieItem" id="imdb1"></div>
             <h3 class="movieItem mc">Metacritic</h3>
-              <div class="movieItem mc" id=mc1></div>
+              <div class="movieItem" id="mc1"></div>
             <h3 class="movieItem rt">Rotten Tomatoes</h3>
-              <div class="movieItem rt" id=rttm1>TOMATOMETER</div>
-              <div class="movieItem rt" id=rtas1>AUDIENCE SCORE</div>
+              <div class="movieItem" id="rtTm1">TOMATOMETER
+                <img class="rtImg" src="images/rtfresh.png">
+              </div>
+              <div class="movieItem" id="rtAs1">AUDIENCE SCORE
+                <img class="rtImg" src="images/rtpopcorn.png">
+              </div>
           </div>
         </div>
 
+        <!-- Boks for film 2 -->
         <div class="movieBox">
           <h3>Thor: The Dark World</h3>
           <div class="movieContainer">
@@ -91,15 +132,41 @@
             </p>
             <img class="movieItem" src="images/movie2.jpg" alt="Thor2">
             <h3 class="movieItem imdb">IMDb</h3>
-              <div class="movieItem imdb" id=imdb2>a</div>
+              <div class="movieItem" id="emptyStarsDiv2">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+              </div>
+              <div class="movieItem" id="fullStarsDiv2">
+                <img class="star" id="imdb2Star1" src="images/fullstar.png">
+                <img class="star" id="imdb2Star2" src="images/fullstar.png">
+                <img class="star" id="imdb2Star3" src="images/fullstar.png">
+                <img class="star" id="imdb2Star4" src="images/fullstar.png">
+                <img class="star" id="imdb2Star5" src="images/fullstar.png">
+                <img class="star" id="imdb2Star6" src="images/fullstar.png">
+                <img class="star" id="imdb2Star7" src="images/fullstar.png">
+              </div>
+              <div class="movieItem" id="imdb2"></div>
             <h3 class="movieItem mc">Metacritic</h3>
-              <div class="movieItem mc" id=mc2></div>
+              <div class="movieItem" id="mc2"></div>
             <h3 class="movieItem rt">Rotten Tomatoes</h3>
-              <div class="movieItem rt" id=rttm2>b</div>
-              <div class="movieItem rt" id=rtas2>c</div>
+              <div class="movieItem" id="rtTm2">TOMATOMETER
+                <img class="rtImg" src="images/rttomato.png">
+              </div>
+              <div class="movieItem" id="rtAs2">AUDIENCE SCORE
+                <img class="rtImg" src="images/rtpopcorn.png">
+              </div>
           </div>
         </div>
 
+        <!-- Boks for film 3 -->
         <div class="movieBox">
           <h3>Thor: Ragnarok</h3>
           <div class="movieContainer">
@@ -113,15 +180,41 @@
             </p>
             <img class="movieItem" src="images/movie3.jpg" alt="Thor3">
             <h3 class="movieItem imdb">IMDb</h3>
-              <div class="movieItem" id=imdb3>a</div>
+            <div class="movieItem" id="emptyStarsDiv3">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+                <img class="star" src="images/emptystar.png">
+              </div>
+              <div class="movieItem" id="fullStarsDiv3">
+                <img class="star" id="imdb3Star1" src="images/fullstar.png">
+                <img class="star" id="imdb3Star2" src="images/fullstar.png">
+                <img class="star" id="imdb3Star3" src="images/fullstar.png">
+                <img class="star" id="imdb3Star4" src="images/fullstar.png">
+                <img class="star" id="imdb3Star5" src="images/fullstar.png">
+                <img class="star" id="imdb3Star6" src="images/fullstar.png">
+                <img class="star" id="imdb3Star7" src="images/fullstar.png">
+              </div>
+              <div class="movieItem" id="imdb3"></div>
             <h3 class="movieItem mc">Metacritic</h3>
-              <div class="movieItem" id=mc3></div>
+              <div class="movieItem" id="mc3"></div>
             <h3 class="movieItem rt">Rotten Tomatoes</h3>
-              <div class="movieItem rt" id=rttm3>b</div>
-              <div class="movieItem rt" id=rtas3>c</div>
+              <div class="movieItem" id="rtTm3">TOMATOMETER
+                <img class="rtImg" src="images/rtfresh.png">
+              </div>
+              <div class="movieItem" id="rtAs3">AUDIENCE SCORE
+                <img class="rtImg" src="images/rtpopcorn.png">
+              </div>
           </div>
         </div>
         
+        <!-- Boks for film 4 -->
         <div class="movieBox">
           <h3>Thor: Love and Thunder</h3>
           <div class="movieContainer">
@@ -130,24 +223,7 @@
           </div>
         </div>
       </div>
-    </section>
-    
-    <section>
-      <div class="row">
-        <p>Lorem ipsum dolor sit amet adipiscing bibendum sem orci tempus aliquet gravida, orci amet iaculis aptent blandit quam accumsan donec in facilisis, cursus ante curabitur aliquet condimentum tincidunt facilisis non cubilia lorem et pretium aliquam phasellus ipsum metus quisque auctor tristique donec nibh, praesent congue ultricies aenean ornare ligula sagittis proin sed vestibulum purus tempus aenean neque aliquam curae vivamus purus egestas ligula tincidunt nullam.</p>
-        <p>Lorem ipsum dolor sit amet adipiscing bibendum sem orci tempus aliquet gravida, orci amet iaculis aptent blandit quam accumsan donec in facilisis, cursus ante curabitur aliquet condimentum tincidunt facilisis non cubilia lorem et pretium aliquam phasellus ipsum metus quisque auctor tristique donec nibh, praesent congue ultricies aenean ornare ligula sagittis proin sed vestibulum purus tempus aenean neque aliquam curae vivamus purus egestas ligula tincidunt nullam.</p>
-        <p>Lorem ipsum dolor sit amet adipiscing bibendum sem orci tempus aliquet gravida, orci amet iaculis aptent blandit quam accumsan donec in facilisis, cursus ante curabitur aliquet condimentum tincidunt facilisis non cubilia lorem et pretium aliquam phasellus ipsum metus quisque auctor tristique donec nibh, praesent congue ultricies aenean ornare ligula sagittis proin sed vestibulum purus tempus aenean neque aliquam curae vivamus purus egestas ligula tincidunt nullam.</p>
-        <p>Lorem ipsum dolor sit amet adipiscing bibendum sem orci tempus aliquet gravida, orci amet iaculis aptent blandit quam accumsan donec in facilisis, cursus ante curabitur aliquet condimentum tincidunt facilisis non cubilia lorem et pretium aliquam phasellus ipsum metus quisque auctor tristique donec nibh, praesent congue ultricies aenean ornare ligula sagittis proin sed vestibulum purus tempus aenean neque aliquam curae vivamus purus egestas ligula tincidunt nullam.</p>
-        <p>Lorem ipsum dolor sit amet adipiscing bibendum sem orci tempus aliquet gravida, orci amet iaculis aptent blandit quam accumsan donec in facilisis, cursus ante curabitur aliquet condimentum tincidunt facilisis non cubilia lorem et pretium aliquam phasellus ipsum metus quisque auctor tristique donec nibh, praesent congue ultricies aenean ornare ligula sagittis proin sed vestibulum purus tempus aenean neque aliquam curae vivamus purus egestas ligula tincidunt nullam.</p>
-        <p>Lorem ipsum dolor sit amet adipiscing bibendum sem orci tempus aliquet gravida, orci amet iaculis aptent blandit quam accumsan donec in facilisis, cursus ante curabitur aliquet condimentum tincidunt facilisis non cubilia lorem et pretium aliquam phasellus ipsum metus quisque auctor tristique donec nibh, praesent congue ultricies aenean ornare ligula sagittis proin sed vestibulum purus tempus aenean neque aliquam curae vivamus purus egestas ligula tincidunt nullam.</p>
-        <p>Lorem ipsum dolor sit amet adipiscing bibendum sem orci tempus aliquet gravida, orci amet iaculis aptent blandit quam accumsan donec in facilisis, cursus ante curabitur aliquet condimentum tincidunt facilisis non cubilia lorem et pretium aliquam phasellus ipsum metus quisque auctor tristique donec nibh, praesent congue ultricies aenean ornare ligula sagittis proin sed vestibulum purus tempus aenean neque aliquam curae vivamus purus egestas ligula tincidunt nullam.</p>
-        <p>Lorem ipsum dolor sit amet adipiscing bibendum sem orci tempus aliquet gravida, orci amet iaculis aptent blandit quam accumsan donec in facilisis, cursus ante curabitur aliquet condimentum tincidunt facilisis non cubilia lorem et pretium aliquam phasellus ipsum metus quisque auctor tristique donec nibh, praesent congue ultricies aenean ornare ligula sagittis proin sed vestibulum purus tempus aenean neque aliquam curae vivamus purus egestas ligula tincidunt nullam.</p>
-        <p>Lorem ipsum dolor sit amet adipiscing bibendum sem orci tempus aliquet gravida, orci amet iaculis aptent blandit quam accumsan donec in facilisis, cursus ante curabitur aliquet condimentum tincidunt facilisis non cubilia lorem et pretium aliquam phasellus ipsum metus quisque auctor tristique donec nibh, praesent congue ultricies aenean ornare ligula sagittis proin sed vestibulum purus tempus aenean neque aliquam curae vivamus purus egestas ligula tincidunt nullam.</p>
-        <p>Lorem ipsum dolor sit amet adipiscing bibendum sem orci tempus aliquet gravida, orci amet iaculis aptent blandit quam accumsan donec in facilisis, cursus ante curabitur aliquet condimentum tincidunt facilisis non cubilia lorem et pretium aliquam phasellus ipsum metus quisque auctor tristique donec nibh, praesent congue ultricies aenean ornare ligula sagittis proin sed vestibulum purus tempus aenean neque aliquam curae vivamus purus egestas ligula tincidunt nullam.</p>
-        <p>Lorem ipsum dolor sit amet adipiscing bibendum sem orci tempus aliquet gravida, orci amet iaculis aptent blandit quam accumsan donec in facilisis, cursus ante curabitur aliquet condimentum tincidunt facilisis non cubilia lorem et pretium aliquam phasellus ipsum metus quisque auctor tristique donec nibh, praesent congue ultricies aenean ornare ligula sagittis proin sed vestibulum purus tempus aenean neque aliquam curae vivamus purus egestas ligula tincidunt nullam.</p>
-        <p>Lorem ipsum dolor sit amet adipiscing bibendum sem orci tempus aliquet gravida, orci amet iaculis aptent blandit quam accumsan donec in facilisis, cursus ante curabitur aliquet condimentum tincidunt facilisis non cubilia lorem et pretium aliquam phasellus ipsum metus quisque auctor tristique donec nibh, praesent congue ultricies aenean ornare ligula sagittis proin sed vestibulum purus tempus aenean neque aliquam curae vivamus purus egestas ligula tincidunt nullam.</p>
-        <p>Lorem ipsum dolor sit amet adipiscing bibendum sem orci tempus aliquet gravida, orci amet iaculis aptent blandit quam accumsan donec in facilisis, cursus ante curabitur aliquet condimentum tincidunt facilisis non cubilia lorem et pretium aliquam phasellus ipsum metus quisque auctor tristique donec nibh, praesent congue ultricies aenean ornare ligula sagittis proin sed vestibulum purus tempus aenean neque aliquam curae vivamus purus egestas ligula tincidunt nullam.</p>
-      </div>
+      
     </section>
 
   </body>

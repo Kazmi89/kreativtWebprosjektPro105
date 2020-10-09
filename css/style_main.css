@@ -1,0 +1,2856 @@
+/*-------------*/
+/*  GENERELT   */
+/*-------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #2c3034;
+  color: #faf0bf;
+  font-family: "Bangers", cursive, Arial;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+/*----------------*/
+/* DELER AV SIDEN */
+/*----------------*/
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.infoBox {
+  padding: 1%;
+}
+
+/*----------*/
+/* HEADINGS */
+/*----------*/
+h1,
+h2,
+h3 {
+  font-weight: 300;
+}
+
+h1 {
+  margin: 0;
+  margin-bottom: 20px;
+  color: #faf0bf;
+  font-size: 200%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+}
+
+h2:after {
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: #fadf7f;
+  content: " ";
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+/*---------*/
+/* AVSNITT */
+/*---------*/
+.longCopy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+}
+
+/*------------------------*/
+/* REGLER FOR FILM-BOKSER */
+/*------------------------*/
+.movieBox {
+  width: 300px;
+  height: 60px;
+  padding: 20px;
+  border-bottom: 2px solid #2c3034;
+
+  background-color: #404b56;
+
+  text-align: center;
+
+  transition: width 0.5s ease-in 0s, height 0.5s ease-in 0s;
+}
+.movieBox:hover {
+  width: 100%;
+  height: 430px;
+}
+
+.movieContainer {
+  position: relative;
+  display: grid;
+  grid-template: 45% 10% auto auto / auto auto auto auto auto;
+
+  opacity: 0;
+
+  font-size: 89%;
+
+  transition: opacity 0s ease-in 0s;
+}
+.movieBox:hover .movieContainer {
+  opacity: 1;
+
+  transition: opacity 0.5s ease-in 0.5s;
+}
+
+.movieItem {
+  display: none;
+
+  margin: 3px;
+}
+.movieBox:hover .movieItem {
+  display: grid;
+}
+h3.movieItem:after {
+  width: 200px;
+  height: 1px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+  background-color: #fadf7f;
+
+  content: " ";
+}
+p.movieItem {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 4;
+
+  text-align: left;
+}
+img.movieItem {
+  grid-row: 1 / span 4;
+  grid-column: 5 / span 1;
+
+  width: 250px;
+  height: 350px;
+}
+
+/* IMDB */
+.imdb {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 1;
+}
+#emptyStarsDiv1 {
+  display: inline-block;
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+
+  width: 250px;
+  height: 40px;
+  margin: auto;
+}
+#imdb1:after {
+  font-size: 200%;
+
+  content: "7,0/10";
+  animation-name: imdb1Animation;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+#emptyStarsDiv2 {
+  display: inline-block;
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+
+  width: 250px;
+  height: 40px;
+  margin: auto;
+}
+#imdb2:after {
+  font-size: 200%;
+
+  content: "6,9/10";
+  animation-name: imdb2Animation;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+#emptyStarsDiv3 {
+  display: inline-block;
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+
+  width: 250px;
+  height: 40px;
+  margin: auto;
+}
+#imdb3:after {
+  font-size: 200%;
+
+  content: "7,9/10";
+  animation-name: imdb3Animation;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+/* Full Stars */
+/* Finner bare ikke ut hvorfor disse spilles av når siden laster inn, og ikke når du 'hovrer' over boksen */
+.star {
+  width: 21px;
+  height: 21px;
+}
+#fullStarsDiv1 {
+  position: relative;
+  left: -36.7px;
+  display: inline-block;
+
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+
+  width: 250px;
+  height: 40px;
+  margin: auto;
+}
+#imdb1Star1 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+}
+#imdb1Star2 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 0.5s;
+}
+#imdb1Star3 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+}
+#imdb1Star4 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 1.5s;
+}
+#imdb1Star5 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 2s;
+}
+#imdb1Star6 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 2.5s;
+}
+#imdb1Star7 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 3s;
+}
+#fullStarsDiv2 {
+  position: relative;
+  left: -36.7px;
+  display: inline-block;
+
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+
+  width: 250px;
+  height: 40px;
+  margin: auto;
+}
+#imdb2Star1 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+}
+#imdb2Star2 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 0.5s;
+}
+#imdb2Star3 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+}
+#imdb2Star4 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 1.5s;
+}
+#imdb2Star5 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 2s;
+}
+#imdb2Star6 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 2.5s;
+}
+#imdb2Star7 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 3s;
+}
+#fullStarsDiv3 {
+  position: relative;
+  left: -36.7px;
+  display: inline-block;
+
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+
+  width: 250px;
+  height: 40px;
+  margin: auto;
+}
+#imdb3Star1 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.44s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+}
+#imdb3Star2 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.44s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 0.44s;
+}
+#imdb3Star3 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.44s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 0.88s;
+}
+#imdb3Star4 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.44s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 1.32s;
+}
+#imdb3Star5 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.44s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 1.76s;
+}
+#imdb3Star6 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.44s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 2.2s;
+}
+#imdb3Star7 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.44s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 2.64s;
+}
+#imdb3Star7 {
+  opacity: 1;
+  animation-name: starAnimation;
+  animation-duration: 0.44s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 3.08s;
+}
+
+/* METACRITIC */
+.mc {
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 1;
+}
+#mc1 {
+  grid-row: 3 / span 2;
+  grid-column: 2 / span 1;
+
+  width: 70px;
+  height: 70px;
+  margin: auto;
+
+  font-size: 230%;
+  line-height: 70px;
+}
+#mc1:before {
+  background-color: #ffcc33;
+
+  content: "57";
+  animation-name: mc1Animation;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+#mc2 {
+  grid-row: 3 / span 2;
+  grid-column: 2 / span 1;
+
+  width: 70px;
+  height: 70px;
+  margin: auto;
+
+  font-size: 230%;
+  line-height: 70px;
+}
+#mc2:before {
+  background-color: #ffcc33;
+
+  content: "57";
+  animation-name: mc2Animation;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+#mc3 {
+  grid-row: 3 / span 2;
+  grid-column: 2 / span 1;
+
+  width: 70px;
+  height: 70px;
+  margin: auto;
+
+  font-size: 230%;
+  line-height: 70px;
+}
+#mc3:before {
+  background-color: #66cc33;
+
+  content: "57";
+  animation-name: mc3Animation;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+/* ROTTEN TOMATOES */
+.rt {
+  grid-row: 2 / span 1;
+  grid-column: 3 / span 2;
+}
+.rtImg {
+  position: absolute;
+
+  width: 55px;
+  height: 55px;
+
+  animation-name: rtImgAnimation;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+/* Tomatometer */
+#rtTm1 {
+  position: relative;
+  grid-row: 3 / span 2;
+  grid-column: 3 / span 1;
+
+  width: 150px;
+  height: 100px;
+  color: black;
+  margin: auto;
+
+  font-size: 150%;
+  text-align: right;
+}
+#rtTm1:before {
+  font-size: 180%;
+
+  content: "77%";
+  animation-name: rtTm1Animation;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+#rtTm2 {
+  position: relative;
+  grid-row: 3 / span 2;
+  grid-column: 3 / span 1;
+
+  width: 150px;
+  height: 100px;
+  color: black;
+  margin: auto;
+
+  font-size: 150%;
+  text-align: right;
+}
+#rtTm2:before {
+  font-size: 180%;
+
+  content: "66%";
+  animation-name: rtTm2Animation;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+#rtTm3 {
+  position: relative;
+  grid-row: 3 / span 2;
+  grid-column: 3 / span 1;
+
+  width: 150px;
+  height: 100px;
+  color: black;
+  margin: auto;
+
+  font-size: 150%;
+  text-align: right;
+}
+#rtTm3:before {
+  font-size: 180%;
+
+  content: "93%";
+  animation-name: rtTm3Animation;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+/* Audience Score */
+#rtAs1 {
+  position: relative;
+  grid-row: 3 / span 2;
+  grid-column: 4 / span 1;
+
+  width: 150px;
+  height: 100px;
+  color: black;
+  margin: auto;
+
+  font-size: 150%;
+  text-align: right;
+}
+#rtAs1:before {
+  font-size: 180%;
+
+  content: "76%";
+  animation-name: rtAs1Animation;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+#rtAs2 {
+  position: relative;
+  grid-row: 3 / span 2;
+  grid-column: 4 / span 1;
+
+  width: 150px;
+  height: 100px;
+  color: black;
+  margin: auto;
+
+  font-size: 150%;
+  text-align: right;
+}
+#rtAs2:before {
+  font-size: 180%;
+
+  content: "76%";
+  animation-name: rtAs2Animation;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+#rtAs3 {
+  position: relative;
+  grid-row: 3 / span 2;
+  grid-column: 4 / span 1;
+
+  width: 150px;
+  height: 100px;
+  color: black;
+  margin: auto;
+
+  font-size: 150%;
+  text-align: right;
+}
+#rtAs3:before {
+  font-size: 180%;
+
+  content: "87%";
+  animation-name: rtAs3Animation;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+/* KOMMENDE FILM */
+img.upcomingMovie {
+  grid-row: 1 / span 3;
+  grid-column: 4 / span 3;
+}
+div.upcomingMovie {
+  position: absolute;
+  top: 120px;
+  display: none;
+
+  width: 100%;
+
+  background-color: #cc0e1d4d;
+
+  font-size: 120px;
+
+  transform: rotate(-10deg);
+}
+.movieBox:hover .upcomingMovie {
+  display: block;
+}
+
+/* Tilbake-knapp */
+#back {
+  padding: 11px 23px;
+  border: 1px solid #566963;
+  border-radius: 5px;
+
+  color: #faf0bf;
+  background-color: #768d87;
+
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+#back:hover {
+  background: linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+  background-color: #6c7c7c;
+}
+
+/* Animasjoner til ratings (noen er veldig lange fordi vi ikke har js til bruk) */
+/* IMDb */
+@keyframes starAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  99% {
+    transform: rotate(360deg) scale(2);
+  }
+  100% {
+    transform: rotate(0) scale(1);
+  }
+}
+@keyframes imdb1Animation {
+  0% {
+    content: "-,-/10";
+  }
+  8% {
+    content: "1,0/10";
+  }
+  22% {
+    content: "2,0/10";
+  }
+  36% {
+    content: "3,0/10";
+  }
+  50% {
+    content: "4,0/10";
+  }
+  65% {
+    content: "5,0/10";
+  }
+  79% {
+    content: "6,0/10";
+  }
+  93% {
+    content: "7,0/10";
+  }
+  100% {
+    content: "7,0/10";
+  }
+}
+@keyframes imdb2Animation {
+  0% {
+    content: "-,-/10";
+  }
+  8% {
+    content: "1,0/10";
+  }
+  22% {
+    content: "2,0/10";
+  }
+  36% {
+    content: "3,0/10";
+  }
+  50% {
+    content: "4,0/10";
+  }
+  65% {
+    content: "5,0/10";
+  }
+  79% {
+    content: "6,0/10";
+  }
+  81% {
+    content: "6,1/10";
+  }
+  83% {
+    content: "6,2/10";
+  }
+  85% {
+    content: "6,3/10";
+  }
+  88% {
+    content: "6,4/10";
+  }
+  90% {
+    content: "6,5/10";
+  }
+  92% {
+    content: "6,6/10";
+  }
+  95% {
+    content: "6,7/10";
+  }
+  97% {
+    content: "6,8/10";
+  }
+  99% {
+    content: "6,9/10";
+  }
+  100% {
+    content: "6,9/10";
+  }
+}
+@keyframes imdb3Animation {
+  0% {
+    content: "-,-/10";
+  }
+  7% {
+    content: "1,0/10";
+  }
+  19% {
+    content: "2,0/10";
+  }
+  32% {
+    content: "3,0/10";
+  }
+  44% {
+    content: "4,0/10";
+  }
+  57% {
+    content: "5,0/10";
+  }
+  69% {
+    content: "6,0/10";
+  }
+  82% {
+    content: "7,0/10";
+  }
+  84% {
+    content: "7,1/10";
+  }
+  86% {
+    content: "7,2/10";
+  }
+  88% {
+    content: "7,3/10";
+  }
+  90% {
+    content: "7,4/10";
+  }
+  92% {
+    content: "7,5/10";
+  }
+  94% {
+    content: "7,6/10";
+  }
+  96% {
+    content: "7,7/10";
+  }
+  98% {
+    content: "7,8/10";
+  }
+  100% {
+    content: "7,9/10";
+  }
+}
+/* Metacritic */
+@keyframes mc1Animation {
+  0% {
+    background-color: #ff0000;
+    content: "0";
+  }
+  1% {
+    content: "1";
+  }
+  3% {
+    content: "2";
+  }
+  5% {
+    content: "3";
+  }
+  7% {
+    content: "4";
+  }
+  8% {
+    content: "5";
+  }
+  10% {
+    content: "6";
+  }
+  12% {
+    content: "7";
+  }
+  14% {
+    content: "8";
+  }
+  15% {
+    content: "9";
+  }
+  17% {
+    content: "10";
+  }
+  19% {
+    content: "11";
+  }
+  21% {
+    content: "12";
+  }
+  22% {
+    content: "13";
+  }
+  24% {
+    content: "14";
+  }
+  26% {
+    content: "15";
+  }
+  28% {
+    content: "16";
+  }
+  29% {
+    content: "17";
+  }
+  31% {
+    content: "18";
+  }
+  33% {
+    content: "19";
+  }
+  35% {
+    content: "20";
+  }
+  36% {
+    content: "21";
+  }
+  38% {
+    content: "22";
+  }
+  40% {
+    content: "23";
+  }
+  42% {
+    content: "24";
+  }
+  43% {
+    content: "25";
+  }
+  45% {
+    content: "26";
+  }
+  47% {
+    content: "27";
+  }
+  49% {
+    content: "28";
+  }
+  50% {
+    content: "29";
+  }
+  52% {
+    content: "30";
+  }
+  54% {
+    content: "31";
+  }
+  56% {
+    content: "32";
+  }
+  58% {
+    content: "33";
+  }
+  59% {
+    content: "34";
+  }
+  61% {
+    content: "35";
+  }
+  63% {
+    content: "36";
+  }
+  65% {
+    content: "37";
+  }
+  66% {
+    content: "38";
+  }
+  68% {
+    content: "39";
+  }
+  70% {
+    background-color: #ffcc33;
+    content: "40";
+  }
+  72% {
+    content: "41";
+  }
+  73% {
+    content: "42";
+  }
+  75% {
+    content: "43";
+  }
+  77% {
+    content: "44";
+  }
+  79% {
+    content: "45";
+  }
+  80% {
+    content: "46";
+  }
+  82% {
+    content: "47";
+  }
+  84% {
+    content: "48";
+  }
+  86% {
+    content: "49";
+  }
+  87% {
+    content: "50";
+  }
+  89% {
+    content: "51";
+  }
+  91% {
+    content: "52";
+  }
+  93% {
+    content: "53";
+  }
+  94% {
+    content: "54";
+  }
+  96% {
+    content: "55";
+  }
+  98% {
+    content: "56";
+  }
+  100% {
+    content: "57";
+  }
+}
+@keyframes mc2Animation {
+  0% {
+    background-color: #ff0000;
+    content: "0";
+  }
+  1% {
+    content: "1";
+  }
+  3% {
+    content: "2";
+  }
+  5% {
+    content: "3";
+  }
+  7% {
+    content: "4";
+  }
+  9% {
+    content: "5";
+  }
+  11% {
+    content: "6";
+  }
+  13% {
+    content: "7";
+  }
+  14% {
+    content: "8";
+  }
+  16% {
+    content: "9";
+  }
+  18% {
+    content: "10";
+  }
+  20% {
+    content: "11";
+  }
+  22% {
+    content: "12";
+  }
+  24% {
+    content: "13";
+  }
+  25% {
+    content: "14";
+  }
+  27% {
+    content: "15";
+  }
+  29% {
+    content: "16";
+  }
+  31% {
+    content: "17";
+  }
+  33% {
+    content: "18";
+  }
+  35% {
+    content: "19";
+  }
+  37% {
+    content: "20";
+  }
+  38% {
+    content: "21";
+  }
+  40% {
+    content: "22";
+  }
+  42% {
+    content: "23";
+  }
+  44% {
+    content: "24";
+  }
+  46% {
+    content: "25";
+  }
+  48% {
+    content: "26";
+  }
+  50% {
+    content: "27";
+  }
+  51% {
+    content: "28";
+  }
+  53% {
+    content: "29";
+  }
+  55% {
+    content: "30";
+  }
+  57% {
+    content: "31";
+  }
+  59% {
+    content: "32";
+  }
+  61% {
+    content: "33";
+  }
+  63% {
+    content: "34";
+  }
+  64% {
+    content: "35";
+  }
+  66% {
+    content: "36";
+  }
+  68% {
+    content: "37";
+  }
+  70% {
+    content: "38";
+  }
+  72% {
+    content: "39";
+  }
+  74% {
+    background-color: #ffcc33;
+    content: "40";
+  }
+  75% {
+    content: "41";
+  }
+  77% {
+    content: "42";
+  }
+  79% {
+    content: "43";
+  }
+  81% {
+    content: "44";
+  }
+  83% {
+    content: "45";
+  }
+  85% {
+    content: "46";
+  }
+  87% {
+    content: "47";
+  }
+  88% {
+    content: "48";
+  }
+  90% {
+    content: "49";
+  }
+  92% {
+    content: "50";
+  }
+  94% {
+    content: "51";
+  }
+  96% {
+    content: "52";
+  }
+  98% {
+    content: "53";
+  }
+  100% {
+    content: "54";
+  }
+}
+@keyframes mc3Animation {
+  0% {
+    background-color: #ff0000;
+    content: "0";
+  }
+  1% {
+    content: "1";
+  }
+  3% {
+    content: "2";
+  }
+  4% {
+    content: "3";
+  }
+  5% {
+    content: "4";
+  }
+  7% {
+    content: "5";
+  }
+  8% {
+    content: "6";
+  }
+  9% {
+    content: "7";
+  }
+  11% {
+    content: "8";
+  }
+  12% {
+    content: "9";
+  }
+  13% {
+    content: "10";
+  }
+  15% {
+    content: "11";
+  }
+  16% {
+    content: "12";
+  }
+  17% {
+    content: "13";
+  }
+  19% {
+    content: "14";
+  }
+  20% {
+    content: "15";
+  }
+  21% {
+    content: "16";
+  }
+  23% {
+    content: "17";
+  }
+  24% {
+    content: "18";
+  }
+  25% {
+    content: "19";
+  }
+  27% {
+    content: "20";
+  }
+  28% {
+    content: "21";
+  }
+  30% {
+    content: "22";
+  }
+  31% {
+    content: "23";
+  }
+  32% {
+    content: "24";
+  }
+  34% {
+    content: "25";
+  }
+  35% {
+    content: "26";
+  }
+  36% {
+    content: "27";
+  }
+  38% {
+    content: "28";
+  }
+  39% {
+    content: "29";
+  }
+  40% {
+    content: "30";
+  }
+  42% {
+    content: "31";
+  }
+  43% {
+    content: "32";
+  }
+  44% {
+    content: "33";
+  }
+  46% {
+    content: "34";
+  }
+  47% {
+    content: "35";
+  }
+  48% {
+    content: "36";
+  }
+  50% {
+    content: "37";
+  }
+  51% {
+    content: "38";
+  }
+  53% {
+    content: "39";
+  }
+  54% {
+    background-color: #ffcc33;
+    content: "40";
+  }
+  55% {
+    content: "41";
+  }
+  57% {
+    content: "42";
+  }
+  58% {
+    content: "43";
+  }
+  59% {
+    content: "44";
+  }
+  61% {
+    content: "45";
+  }
+  62% {
+    content: "46";
+  }
+  63% {
+    content: "47";
+  }
+  65% {
+    content: "48";
+  }
+  66% {
+    content: "49";
+  }
+  67% {
+    content: "50";
+  }
+  69% {
+    content: "51";
+  }
+  70% {
+    content: "52";
+  }
+  71% {
+    content: "53";
+  }
+  73% {
+    content: "54";
+  }
+  74% {
+    content: "55";
+  }
+  75% {
+    content: "56";
+  }
+  77% {
+    content: "57";
+  }
+  78% {
+    content: "58";
+  }
+  80% {
+    content: "59";
+  }
+  81% {
+    content: "60";
+  }
+  82% {
+    background-color: #66cc33;
+    content: "61";
+  }
+  84% {
+    content: "62";
+  }
+  85% {
+    content: "63";
+  }
+  86% {
+    content: "64";
+  }
+  88% {
+    content: "65";
+  }
+  89% {
+    content: "66";
+  }
+  90% {
+    content: "67";
+  }
+  92% {
+    content: "68";
+  }
+  93% {
+    content: "69";
+  }
+  94% {
+    content: "70";
+  }
+  96% {
+    content: "71";
+  }
+  97% {
+    content: "72";
+  }
+  98% {
+    content: "73";
+  }
+  100% {
+    content: "74";
+  }
+}
+/* Rotten Tomatoes */
+@keyframes rtImgAnimation {
+  0% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(0);
+  }
+  85% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes rtTm1Animation {
+  0% {
+    content: "0%";
+  }
+  1% {
+    content: "1%";
+  }
+  2% {
+    content: "2%";
+  }
+  4% {
+    content: "3%";
+  }
+  5% {
+    content: "4%";
+  }
+  6% {
+    content: "5%";
+  }
+  8% {
+    content: "6%";
+  }
+  9% {
+    content: "7%";
+  }
+  10% {
+    content: "8%";
+  }
+  12% {
+    content: "9%";
+  }
+  13% {
+    content: "10%";
+  }
+  14% {
+    content: "11%";
+  }
+  15% {
+    content: "12%";
+  }
+  17% {
+    content: "13%";
+  }
+  18% {
+    content: "14%";
+  }
+  19% {
+    content: "15%";
+  }
+  21% {
+    content: "16%";
+  }
+  22% {
+    content: "17%";
+  }
+  23% {
+    content: "18%";
+  }
+  25% {
+    content: "19%";
+  }
+  26% {
+    content: "20%";
+  }
+  27% {
+    content: "21%";
+  }
+  28% {
+    content: "22%";
+  }
+  30% {
+    content: "23%";
+  }
+  31% {
+    content: "24%";
+  }
+  32% {
+    content: "25%";
+  }
+  34% {
+    content: "26%";
+  }
+  35% {
+    content: "27%";
+  }
+  36% {
+    content: "28%";
+  }
+  38% {
+    content: "29%";
+  }
+  39% {
+    content: "30%";
+  }
+  40% {
+    content: "31%";
+  }
+  41% {
+    content: "32%";
+  }
+  43% {
+    content: "33%";
+  }
+  44% {
+    content: "34%";
+  }
+  45% {
+    content: "35%";
+  }
+  47% {
+    content: "36%";
+  }
+  48% {
+    content: "37%";
+  }
+  49% {
+    content: "38%";
+  }
+  50% {
+    content: "39%";
+  }
+  52% {
+    content: "40%";
+  }
+  53% {
+    content: "41%";
+  }
+  54% {
+    content: "42%";
+  }
+  56% {
+    content: "43%";
+  }
+  57% {
+    content: "44%";
+  }
+  58% {
+    content: "45%";
+  }
+  60% {
+    content: "46%";
+  }
+  61% {
+    content: "47%";
+  }
+  62% {
+    content: "48%";
+  }
+  63% {
+    content: "49%";
+  }
+  65% {
+    content: "50%";
+  }
+  66% {
+    content: "51%";
+  }
+  67% {
+    content: "52%";
+  }
+  69% {
+    content: "53%";
+  }
+  70% {
+    content: "54%";
+  }
+  71% {
+    content: "55%";
+  }
+  73% {
+    content: "56%";
+  }
+  74% {
+    content: "57%";
+  }
+  75% {
+    content: "58%";
+  }
+  76% {
+    content: "59%";
+  }
+  78% {
+    content: "60%";
+  }
+  79% {
+    content: "61%";
+  }
+  80% {
+    content: "62%";
+  }
+  82% {
+    content: "63%";
+  }
+  83% {
+    content: "64%";
+  }
+  84% {
+    content: "65%";
+  }
+  86% {
+    content: "66%";
+  }
+  87% {
+    content: "67%";
+  }
+  88% {
+    content: "68%";
+  }
+  89% {
+    content: "69%";
+  }
+  91% {
+    content: "70%";
+  }
+  92% {
+    content: "71%";
+  }
+  93% {
+    content: "72%";
+  }
+  95% {
+    content: "73%";
+  }
+  96% {
+    content: "74%";
+  }
+  97% {
+    content: "75%";
+  }
+  99% {
+    content: "76%";
+  }
+  100% {
+    content: "77%";
+  }
+}
+@keyframes rtAs1Animation {
+  0% {
+    content: "0%";
+  }
+  1% {
+    content: "1%";
+  }
+  2% {
+    content: "2%";
+  }
+  4% {
+    content: "3%";
+  }
+  5% {
+    content: "4%";
+  }
+  6% {
+    content: "5%";
+  }
+  8% {
+    content: "6%";
+  }
+  9% {
+    content: "7%";
+  }
+  10% {
+    content: "8%";
+  }
+  12% {
+    content: "9%";
+  }
+  13% {
+    content: "10%";
+  }
+  14% {
+    content: "11%";
+  }
+  16% {
+    content: "12%";
+  }
+  17% {
+    content: "13%";
+  }
+  18% {
+    content: "14%";
+  }
+  20% {
+    content: "15%";
+  }
+  21% {
+    content: "16%";
+  }
+  22% {
+    content: "17%";
+  }
+  24% {
+    content: "18%";
+  }
+  25% {
+    content: "19%";
+  }
+  26% {
+    content: "20%";
+  }
+  27% {
+    content: "21%";
+  }
+  29% {
+    content: "22%";
+  }
+  30% {
+    content: "23%";
+  }
+  31% {
+    content: "24%";
+  }
+  33% {
+    content: "25%";
+  }
+  34% {
+    content: "26%";
+  }
+  35% {
+    content: "27%";
+  }
+  37% {
+    content: "28%";
+  }
+  38% {
+    content: "29%";
+  }
+  39% {
+    content: "30%";
+  }
+  41% {
+    content: "31%";
+  }
+  42% {
+    content: "32%";
+  }
+  43% {
+    content: "33%";
+  }
+  45% {
+    content: "34%";
+  }
+  46% {
+    content: "35%";
+  }
+  47% {
+    content: "36%";
+  }
+  49% {
+    content: "37%";
+  }
+  50% {
+    content: "38%";
+  }
+  51% {
+    content: "39%";
+  }
+  52% {
+    content: "40%";
+  }
+  54% {
+    content: "41%";
+  }
+  55% {
+    content: "42%";
+  }
+  56% {
+    content: "43%";
+  }
+  58% {
+    content: "44%";
+  }
+  59% {
+    content: "45%";
+  }
+  60% {
+    content: "46%";
+  }
+  62% {
+    content: "47%";
+  }
+  63% {
+    content: "48%";
+  }
+  64% {
+    content: "49%";
+  }
+  66% {
+    content: "50%";
+  }
+  67% {
+    content: "51%";
+  }
+  68% {
+    content: "52%";
+  }
+  70% {
+    content: "53%";
+  }
+  71% {
+    content: "54%";
+  }
+  72% {
+    content: "55%";
+  }
+  74% {
+    content: "56%";
+  }
+  75% {
+    content: "57%";
+  }
+  76% {
+    content: "58%";
+  }
+  77% {
+    content: "59%";
+  }
+  79% {
+    content: "60%";
+  }
+  80% {
+    content: "61%";
+  }
+  81% {
+    content: "62%";
+  }
+  83% {
+    content: "63%";
+  }
+  84% {
+    content: "64%";
+  }
+  85% {
+    content: "65%";
+  }
+  87% {
+    content: "66%";
+  }
+  88% {
+    content: "67%";
+  }
+  89% {
+    content: "68%";
+  }
+  91% {
+    content: "69%";
+  }
+  92% {
+    content: "70%";
+  }
+  93% {
+    content: "71%";
+  }
+  95% {
+    content: "72%";
+  }
+  96% {
+    content: "73%";
+  }
+  97% {
+    content: "74%";
+  }
+  99% {
+    content: "75%";
+  }
+  100% {
+    content: "76%";
+  }
+}
+
+/* GJØR FERDIG!! */
+@keyframes rtTm2Animation {
+  0% {
+    content: "0%";
+  }
+  1% {
+    content: "1%";
+  }
+  2% {
+    content: "2%";
+  }
+  4% {
+    content: "3%";
+  }
+  5% {
+    content: "4%";
+  }
+  6% {
+    content: "5%";
+  }
+  8% {
+    content: "6%";
+  }
+  9% {
+    content: "7%";
+  }
+  10% {
+    content: "8%";
+  }
+  12% {
+    content: "9%";
+  }
+  13% {
+    content: "10%";
+  }
+  14% {
+    content: "11%";
+  }
+  15% {
+    content: "12%";
+  }
+  17% {
+    content: "13%";
+  }
+  18% {
+    content: "14%";
+  }
+  19% {
+    content: "15%";
+  }
+  21% {
+    content: "16%";
+  }
+  22% {
+    content: "17%";
+  }
+  23% {
+    content: "18%";
+  }
+  25% {
+    content: "19%";
+  }
+  26% {
+    content: "20%";
+  }
+  27% {
+    content: "21%";
+  }
+  28% {
+    content: "22%";
+  }
+  30% {
+    content: "23%";
+  }
+  31% {
+    content: "24%";
+  }
+  32% {
+    content: "25%";
+  }
+  34% {
+    content: "26%";
+  }
+  35% {
+    content: "27%";
+  }
+  36% {
+    content: "28%";
+  }
+  38% {
+    content: "29%";
+  }
+  39% {
+    content: "30%";
+  }
+  40% {
+    content: "31%";
+  }
+  41% {
+    content: "32%";
+  }
+  43% {
+    content: "33%";
+  }
+  44% {
+    content: "34%";
+  }
+  45% {
+    content: "35%";
+  }
+  47% {
+    content: "36%";
+  }
+  48% {
+    content: "37%";
+  }
+  49% {
+    content: "38%";
+  }
+  50% {
+    content: "39%";
+  }
+  52% {
+    content: "40%";
+  }
+  53% {
+    content: "41%";
+  }
+  54% {
+    content: "42%";
+  }
+  56% {
+    content: "43%";
+  }
+  57% {
+    content: "44%";
+  }
+  58% {
+    content: "45%";
+  }
+  60% {
+    content: "46%";
+  }
+  61% {
+    content: "47%";
+  }
+  62% {
+    content: "48%";
+  }
+  63% {
+    content: "49%";
+  }
+  65% {
+    content: "50%";
+  }
+  66% {
+    content: "51%";
+  }
+  67% {
+    content: "52%";
+  }
+  69% {
+    content: "53%";
+  }
+  70% {
+    content: "54%";
+  }
+  71% {
+    content: "55%";
+  }
+  73% {
+    content: "56%";
+  }
+  74% {
+    content: "57%";
+  }
+  75% {
+    content: "58%";
+  }
+  76% {
+    content: "59%";
+  }
+  78% {
+    content: "60%";
+  }
+  79% {
+    content: "61%";
+  }
+  80% {
+    content: "62%";
+  }
+  82% {
+    content: "63%";
+  }
+  83% {
+    content: "64%";
+  }
+  84% {
+    content: "65%";
+  }
+  86% {
+    content: "66%";
+  }
+  87% {
+    content: "67%";
+  }
+  88% {
+    content: "68%";
+  }
+  89% {
+    content: "69%";
+  }
+  91% {
+    content: "70%";
+  }
+  92% {
+    content: "71%";
+  }
+  93% {
+    content: "72%";
+  }
+  95% {
+    content: "73%";
+  }
+  96% {
+    content: "74%";
+  }
+  97% {
+    content: "75%";
+  }
+  99% {
+    content: "76%";
+  }
+  100% {
+    content: "77%";
+  }
+}
+@keyframes rtAs2Animation {
+  0% {
+    content: "0%";
+  }
+  1% {
+    content: "1%";
+  }
+  2% {
+    content: "2%";
+  }
+  4% {
+    content: "3%";
+  }
+  5% {
+    content: "4%";
+  }
+  6% {
+    content: "5%";
+  }
+  8% {
+    content: "6%";
+  }
+  9% {
+    content: "7%";
+  }
+  10% {
+    content: "8%";
+  }
+  12% {
+    content: "9%";
+  }
+  13% {
+    content: "10%";
+  }
+  14% {
+    content: "11%";
+  }
+  16% {
+    content: "12%";
+  }
+  17% {
+    content: "13%";
+  }
+  18% {
+    content: "14%";
+  }
+  20% {
+    content: "15%";
+  }
+  21% {
+    content: "16%";
+  }
+  22% {
+    content: "17%";
+  }
+  24% {
+    content: "18%";
+  }
+  25% {
+    content: "19%";
+  }
+  26% {
+    content: "20%";
+  }
+  27% {
+    content: "21%";
+  }
+  29% {
+    content: "22%";
+  }
+  30% {
+    content: "23%";
+  }
+  31% {
+    content: "24%";
+  }
+  33% {
+    content: "25%";
+  }
+  34% {
+    content: "26%";
+  }
+  35% {
+    content: "27%";
+  }
+  37% {
+    content: "28%";
+  }
+  38% {
+    content: "29%";
+  }
+  39% {
+    content: "30%";
+  }
+  41% {
+    content: "31%";
+  }
+  42% {
+    content: "32%";
+  }
+  43% {
+    content: "33%";
+  }
+  45% {
+    content: "34%";
+  }
+  46% {
+    content: "35%";
+  }
+  47% {
+    content: "36%";
+  }
+  49% {
+    content: "37%";
+  }
+  50% {
+    content: "38%";
+  }
+  51% {
+    content: "39%";
+  }
+  52% {
+    content: "40%";
+  }
+  54% {
+    content: "41%";
+  }
+  55% {
+    content: "42%";
+  }
+  56% {
+    content: "43%";
+  }
+  58% {
+    content: "44%";
+  }
+  59% {
+    content: "45%";
+  }
+  60% {
+    content: "46%";
+  }
+  62% {
+    content: "47%";
+  }
+  63% {
+    content: "48%";
+  }
+  64% {
+    content: "49%";
+  }
+  66% {
+    content: "50%";
+  }
+  67% {
+    content: "51%";
+  }
+  68% {
+    content: "52%";
+  }
+  70% {
+    content: "53%";
+  }
+  71% {
+    content: "54%";
+  }
+  72% {
+    content: "55%";
+  }
+  74% {
+    content: "56%";
+  }
+  75% {
+    content: "57%";
+  }
+  76% {
+    content: "58%";
+  }
+  77% {
+    content: "59%";
+  }
+  79% {
+    content: "60%";
+  }
+  80% {
+    content: "61%";
+  }
+  81% {
+    content: "62%";
+  }
+  83% {
+    content: "63%";
+  }
+  84% {
+    content: "64%";
+  }
+  85% {
+    content: "65%";
+  }
+  87% {
+    content: "66%";
+  }
+  88% {
+    content: "67%";
+  }
+  89% {
+    content: "68%";
+  }
+  91% {
+    content: "69%";
+  }
+  92% {
+    content: "70%";
+  }
+  93% {
+    content: "71%";
+  }
+  95% {
+    content: "72%";
+  }
+  96% {
+    content: "73%";
+  }
+  97% {
+    content: "74%";
+  }
+  99% {
+    content: "75%";
+  }
+  100% {
+    content: "76%";
+  }
+}
+@keyframes rtTm3Animation {
+  0% {
+    content: "0%";
+  }
+  1% {
+    content: "1%";
+  }
+  2% {
+    content: "2%";
+  }
+  4% {
+    content: "3%";
+  }
+  5% {
+    content: "4%";
+  }
+  6% {
+    content: "5%";
+  }
+  8% {
+    content: "6%";
+  }
+  9% {
+    content: "7%";
+  }
+  10% {
+    content: "8%";
+  }
+  12% {
+    content: "9%";
+  }
+  13% {
+    content: "10%";
+  }
+  14% {
+    content: "11%";
+  }
+  15% {
+    content: "12%";
+  }
+  17% {
+    content: "13%";
+  }
+  18% {
+    content: "14%";
+  }
+  19% {
+    content: "15%";
+  }
+  21% {
+    content: "16%";
+  }
+  22% {
+    content: "17%";
+  }
+  23% {
+    content: "18%";
+  }
+  25% {
+    content: "19%";
+  }
+  26% {
+    content: "20%";
+  }
+  27% {
+    content: "21%";
+  }
+  28% {
+    content: "22%";
+  }
+  30% {
+    content: "23%";
+  }
+  31% {
+    content: "24%";
+  }
+  32% {
+    content: "25%";
+  }
+  34% {
+    content: "26%";
+  }
+  35% {
+    content: "27%";
+  }
+  36% {
+    content: "28%";
+  }
+  38% {
+    content: "29%";
+  }
+  39% {
+    content: "30%";
+  }
+  40% {
+    content: "31%";
+  }
+  41% {
+    content: "32%";
+  }
+  43% {
+    content: "33%";
+  }
+  44% {
+    content: "34%";
+  }
+  45% {
+    content: "35%";
+  }
+  47% {
+    content: "36%";
+  }
+  48% {
+    content: "37%";
+  }
+  49% {
+    content: "38%";
+  }
+  50% {
+    content: "39%";
+  }
+  52% {
+    content: "40%";
+  }
+  53% {
+    content: "41%";
+  }
+  54% {
+    content: "42%";
+  }
+  56% {
+    content: "43%";
+  }
+  57% {
+    content: "44%";
+  }
+  58% {
+    content: "45%";
+  }
+  60% {
+    content: "46%";
+  }
+  61% {
+    content: "47%";
+  }
+  62% {
+    content: "48%";
+  }
+  63% {
+    content: "49%";
+  }
+  65% {
+    content: "50%";
+  }
+  66% {
+    content: "51%";
+  }
+  67% {
+    content: "52%";
+  }
+  69% {
+    content: "53%";
+  }
+  70% {
+    content: "54%";
+  }
+  71% {
+    content: "55%";
+  }
+  73% {
+    content: "56%";
+  }
+  74% {
+    content: "57%";
+  }
+  75% {
+    content: "58%";
+  }
+  76% {
+    content: "59%";
+  }
+  78% {
+    content: "60%";
+  }
+  79% {
+    content: "61%";
+  }
+  80% {
+    content: "62%";
+  }
+  82% {
+    content: "63%";
+  }
+  83% {
+    content: "64%";
+  }
+  84% {
+    content: "65%";
+  }
+  86% {
+    content: "66%";
+  }
+  87% {
+    content: "67%";
+  }
+  88% {
+    content: "68%";
+  }
+  89% {
+    content: "69%";
+  }
+  91% {
+    content: "70%";
+  }
+  92% {
+    content: "71%";
+  }
+  93% {
+    content: "72%";
+  }
+  95% {
+    content: "73%";
+  }
+  96% {
+    content: "74%";
+  }
+  97% {
+    content: "75%";
+  }
+  99% {
+    content: "76%";
+  }
+  100% {
+    content: "77%";
+  }
+}
+@keyframes rtAs3Animation {
+  0% {
+    content: "0%";
+  }
+  1% {
+    content: "1%";
+  }
+  2% {
+    content: "2%";
+  }
+  4% {
+    content: "3%";
+  }
+  5% {
+    content: "4%";
+  }
+  6% {
+    content: "5%";
+  }
+  8% {
+    content: "6%";
+  }
+  9% {
+    content: "7%";
+  }
+  10% {
+    content: "8%";
+  }
+  12% {
+    content: "9%";
+  }
+  13% {
+    content: "10%";
+  }
+  14% {
+    content: "11%";
+  }
+  16% {
+    content: "12%";
+  }
+  17% {
+    content: "13%";
+  }
+  18% {
+    content: "14%";
+  }
+  20% {
+    content: "15%";
+  }
+  21% {
+    content: "16%";
+  }
+  22% {
+    content: "17%";
+  }
+  24% {
+    content: "18%";
+  }
+  25% {
+    content: "19%";
+  }
+  26% {
+    content: "20%";
+  }
+  27% {
+    content: "21%";
+  }
+  29% {
+    content: "22%";
+  }
+  30% {
+    content: "23%";
+  }
+  31% {
+    content: "24%";
+  }
+  33% {
+    content: "25%";
+  }
+  34% {
+    content: "26%";
+  }
+  35% {
+    content: "27%";
+  }
+  37% {
+    content: "28%";
+  }
+  38% {
+    content: "29%";
+  }
+  39% {
+    content: "30%";
+  }
+  41% {
+    content: "31%";
+  }
+  42% {
+    content: "32%";
+  }
+  43% {
+    content: "33%";
+  }
+  45% {
+    content: "34%";
+  }
+  46% {
+    content: "35%";
+  }
+  47% {
+    content: "36%";
+  }
+  49% {
+    content: "37%";
+  }
+  50% {
+    content: "38%";
+  }
+  51% {
+    content: "39%";
+  }
+  52% {
+    content: "40%";
+  }
+  54% {
+    content: "41%";
+  }
+  55% {
+    content: "42%";
+  }
+  56% {
+    content: "43%";
+  }
+  58% {
+    content: "44%";
+  }
+  59% {
+    content: "45%";
+  }
+  60% {
+    content: "46%";
+  }
+  62% {
+    content: "47%";
+  }
+  63% {
+    content: "48%";
+  }
+  64% {
+    content: "49%";
+  }
+  66% {
+    content: "50%";
+  }
+  67% {
+    content: "51%";
+  }
+  68% {
+    content: "52%";
+  }
+  70% {
+    content: "53%";
+  }
+  71% {
+    content: "54%";
+  }
+  72% {
+    content: "55%";
+  }
+  74% {
+    content: "56%";
+  }
+  75% {
+    content: "57%";
+  }
+  76% {
+    content: "58%";
+  }
+  77% {
+    content: "59%";
+  }
+  79% {
+    content: "60%";
+  }
+  80% {
+    content: "61%";
+  }
+  81% {
+    content: "62%";
+  }
+  83% {
+    content: "63%";
+  }
+  84% {
+    content: "64%";
+  }
+  85% {
+    content: "65%";
+  }
+  87% {
+    content: "66%";
+  }
+  88% {
+    content: "67%";
+  }
+  89% {
+    content: "68%";
+  }
+  91% {
+    content: "69%";
+  }
+  92% {
+    content: "70%";
+  }
+  93% {
+    content: "71%";
+  }
+  95% {
+    content: "72%";
+  }
+  96% {
+    content: "73%";
+  }
+  97% {
+    content: "74%";
+  }
+  99% {
+    content: "75%";
+  }
+  100% {
+    content: "76%";
+  }
+}
+

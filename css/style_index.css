@@ -1,0 +1,93 @@
+html {
+  background-color: #2c3034;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+
+.info {
+  opacity: 0;
+  width: 450px;
+  height: 300px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  background-color: #404b56;
+  border: 1px solid #fadf7f;
+  text-align: center;
+  font-family: Arial;
+  font-size: 17px;
+  font-weight: bold;
+  color: #faf0bf;
+  transition: 1s;
+}
+.info:hover {
+  opacity: 0.9;
+}
+.thor {
+  width: 450px;
+  height: 300px;
+  border: 1px solid #faf0bf;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+#heading1 {
+  color: #faf0bf;
+  align-content: center;
+  text-align: center;
+}
+
+#container1 {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 50px;
+  width: 1500px;
+  height: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#container2 {
+  display: flex;
+  width: 1500px;
+  height: 700px;
+  flex-direction: column;
+}
+#cotainerInfo {
+  position: absolute;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+#buttonContainer {
+  margin-top: 10px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+#allThor {
+  position: relative;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#nextPage {
+  background-color: #768d87;
+  border-radius: 5px;
+  border: 1px solid #566963;
+  cursor: pointer;
+  color: #faf0bf;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 11px 23px;
+}
+#nextPage:hover {
+  background: linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+  background-color: #6c7c7c;
+}

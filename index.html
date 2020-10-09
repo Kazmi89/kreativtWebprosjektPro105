@@ -1,10 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" type="text/css" href="css/style_index.css" />
+
     <meta charset="UTF-8" />
     <title>Thor</title>
   </head>
   <body>
-    <a href="main.html">Main</a>
+    <!-- en div som innholder alt av bilder info og overskrift  -->
+    <div id="container1">
+      <!-- div med overskrift -->
+      <div id="heading1">
+        <h1>THOR ODINSON</h1>
+      </div>
+
+      <!-- en div som innholder alt av bilder og info -->
+      <div id="container2">
+        <!-- en div som skal innholde knappen, alle bildene og all tekstboksene
+        lagde en egen div for denne pga plassering med flex bokser -->
+        <div id="buttonContainer">
+          <!-- knapp som linker til hovedsiden -->
+          <a href="main.html"><button id="nextPage">Hovedside</button></a>
+        </div>
+
+        <!-- div som innholder alle bildene av thor -->
+        <div id="allThor">
+          <!-- bilder med samme class -->
+          <img class="thor" src="images/thor1.jpg" />
+          <img class="thor" src="images/thor2.jpg" />
+          <img class="thor" src="images/thor3.jpg" />
+          <img class="thor" src="images/thor4.jpg" />
+          <img class="thor" src="images/thor5.jpg" />
+          <img class="thor" src="images/thor6.jpg" />
+        </div>
+
+        <!-- en div som innholder all informasjon om hver film, alle har sin egen
+         heading og div, men alle har samme class -->
+        <div id="cotainerInfo">
+          <div class="info">
+            <h2>THOR</h2>
+            <p>
+              The powerful but arrogant god Thor is cast out of Asgard to live
+              amongst humans in Midgard (Earth), where he soon becomes one of
+              their finest defenders
+            </p>
+          </div>
+
+          <div class="info">
+            <h2>THOR: THE DARK WORLD</h2>
+            <p>
+              When the Dark Elves attempt to plunge the universe into darkness,
+              Thor must embark on a perilous and personal journey that will
+              reunite him with doctor Jane Foster.
+            </p>
+          </div>
+
+          <div class="info">
+            <h2>THOR RAGNAROK</h2>
+            <p>
+              Imprisoned on the planet Sakaar, Thor must race against time to
+              return to Asgard and stop Ragnarok, the destruction of his world,
+              at the hands of the powerful and ruthless villain Hela.
+            </p>
+          </div>
+
+          <div class="info">
+            <h2>THOR IN AVENGERS INFINTY WAR</h2>
+            <p>
+              Thor: With the help of his new battle axe, Thor is able to stab
+              Thanos in the heart. Thor survives, but he doesn't stop Thanos
+              from destroying half the universe.
+            </p>
+          </div>
+
+          <div class="info">
+            <h2>THOR IN AVENGERS ENDGAME</h2>
+            <p>
+              As he confidently battles the supervillain Thanos, Thor sinks a
+              blow into Thanos that should kill him — but it doesn't. “Should
+              have gone for the head,” Thanos berates Thor, right before
+              snapping his fingers and erasing half of all life in the universe.
+            </p>
+          </div>
+
+          <div class="info">
+            <h2>THOR LOVE AND THUNDER</h2>
+            <p>Coming soon in 2022</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
