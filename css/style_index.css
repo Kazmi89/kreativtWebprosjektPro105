@@ -1,23 +1,27 @@
 html {
+  display: flex;
+
   background-color: #2c3034;
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
 }
 
 .info {
-  opacity: 0;
   width: 450px;
   height: 300px;
   margin-left: 5px;
   margin-bottom: 5px;
-  background-color: #404b56;
   border: 1px solid #fadf7f;
-  text-align: center;
+
+  color: #faf0bf;
+  background-color: #404b56;
+  opacity: 0;
+
   font-family: Arial;
   font-size: 17px;
   font-weight: bold;
-  color: #faf0bf;
+  text-align: center;
+
   transition: 1s;
 }
 .info:hover {
@@ -32,60 +36,72 @@ html {
 }
 
 #heading1 {
-  color: #faf0bf;
   align-content: center;
+
+  color: #faf0bf;
+
   text-align: center;
 }
 
 #container1 {
   position: absolute;
-  margin-top: 20px;
-  margin-left: 50px;
+
   width: 1500px;
   height: 800px;
+  margin-top: 20px;
+  margin-left: 50px;
+
   background-repeat: no-repeat;
   background-size: cover;
 }
 #container2 {
   display: flex;
+  flex-direction: column;
+
   width: 1500px;
   height: 700px;
-  flex-direction: column;
 }
 #cotainerInfo {
   position: absolute;
-  margin-top: 60px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
+  margin-top: 60px;
+
   cursor: pointer;
 }
 
 #buttonContainer {
-  margin-top: 10px;
-  display: flex;
   position: relative;
+  display: flex;
   justify-content: center;
+
+  margin-top: 10px;
 }
 
 #allThor {
   position: relative;
-  margin-top: 10px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
+  margin-top: 10px;
 }
 
 #nextPage {
-  background-color: #768d87;
-  border-radius: 5px;
+  padding: 11px 23px;
   border: 1px solid #566963;
-  cursor: pointer;
+  border-radius: 5px;
+
   color: #faf0bf;
+  background-color: #768d87;
+
   font-family: Arial;
   font-size: 15px;
   font-weight: bold;
-  padding: 11px 23px;
+
+  cursor: pointer;
 }
 #nextPage:hover {
   background: linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
